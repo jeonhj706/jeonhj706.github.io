@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- EDIT: Change this to your name -->
+  <title>Hyun-Jun Jeon</title>
+
+  <!-- Google Fonts (no installation needed) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ════════════════════════════════════════════════════════
+       HEADER / NAVIGATION
+       EDIT: Change the nav logo text and the links below.
+       The links use #section-id to scroll to that section.
+  ════════════════════════════════════════════════════════ -->
+  <header>
+    <nav class="container nav-inner">
+
+      <!-- EDIT: Your name as it appears in the top-left corner -->
+      <a href="#hero" class="nav-logo">Hyun-Jun Jeon</a>
+
+      <!-- Hamburger button (visible on mobile only) -->
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <!-- Navigation links -->
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#academic">Academic</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#creative">Creative</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+    </nav>
+  </header>
+
+
+  <!-- ════════════════════════════════════════════════════════
+       HERO SECTION
+       EDIT: Your photo, name, subtitle, bio, and links.
+  ════════════════════════════════════════════════════════ -->
+  <section id="hero">
+    <div class="container hero-inner">
+
+      <!-- EDIT: Replace 'images/profile.jpg' with the path to your photo.
+           Upload your photo to the 'images' folder in GitHub.
+           The filename must match exactly (including uppercase/lowercase). -->
+      <img
+        src="images/profile.jpg"
+        alt="Profile photo of Hyun-Jun Jeon"
+        class="hero-photo"
+      />
+
+      <div class="hero-text">
+
+        <!-- EDIT: Your full name -->
+        <h1>Hyun-Jun Jeon</h1>
+
+        <!-- EDIT: Your title / current status -->
+        <p class="hero-subtitle">M.S. Candidate · Aerospace Engineering · KAIST</p>
+
+        <!-- EDIT: A short 2–3 sentence bio about yourself -->
+        <p class="hero-bio">
+          I am a graduate student at KAIST studying aerospace engineering,
+          with a background in mechanical engineering. Alongside my research,
+          I explore creative work in making, drawing, and photography.
+        </p>
+
+        <!-- EDIT: Update the href values with your actual links.
+             For email: use   href="mailto:your@email.com"
+             For GitHub: use  href="https://github.com/yourusername"
+             For LinkedIn: use href="https://linkedin.com/in/yourprofile"
+             Remove any <a> block you do not want to show. -->
+        <div class="hero-links">
+          <a href="mailto:jeonhj@kaist.ac.kr" class="hero-link">✉ Email</a>
+          <a href="https://github.com/jeonhj706" class="hero-link" target="_blank" rel="noopener">GitHub</a>
+          <!-- EDIT: Add or remove links below -->
+          <!-- <a href="https://linkedin.com/in/yourprofile" class="hero-link" target="_blank" rel="noopener">LinkedIn</a> -->
+          <!-- <a href="YOUR_CV_LINK_HERE" class="hero-link" target="_blank" rel="noopener">CV / Résumé</a> -->
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ════════════════════════════════════════════════════════
+       ABOUT SECTION
+       EDIT: Write a longer description of yourself here.
+  ════════════════════════════════════════════════════════ -->
+  <section id="about" class="section">
+    <div class="container">
+      <h2 class="section-title">About</h2>
+      <div class="section-underline"></div>
+
+      <!-- EDIT: Write a few paragraphs about yourself.
+           You can have multiple <p> tags for multiple paragraphs. -->
+      <div class="about-text">
+        <p>
+          I am a graduate student at the Korea Advanced Institute of Science and Technology (KAIST),
+          currently pursuing a Master's degree in Aerospace Engineering. My research interests lie
+          at the intersection of structural mechanics, design, and advanced manufacturing.
+        </p>
+        <br />
+        <p>
+          Prior to graduate school, I completed my Bachelor's degree in Mechanical Engineering at KAIST,
+          where I also participated in UROP (Undergraduate Research Opportunities Program) projects
+          that shaped my passion for engineering research.
+        </p>
+        <br />
+        <p>
+          Beyond academia, I am passionate about creative work — whether it is crafting objects
+          by hand, sketching and illustrating, or capturing moments through photography. I believe
+          that creativity and engineering complement each other deeply.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ════════════════════════════════════════════════════════
+       ACADEMIC SECTION
+       Three tabs: Bachelor's, Master's, UROP.
+       EDIT: Add or change project cards inside each tab panel.
+
+       TO ADD A NEW CARD:
+       Copy the block between <!-- CARD START --> and <!-- CARD END -->
+       and paste it below the existing card. Then change the text.
+  ════════════════════════════════════════════════════════ -->
+  <section id="academic" class="section">
+    <div class="container">
+      <h2 class="section-title">Academic</h2>
+      <div class="section-underline"></div>
+
+      <!-- Tab buttons — do not change the data-tab values -->
+      <div class="academic-tabs">
+        <button class="tab-btn active" data-tab="tab-bachelor">Bachelor's (ME)</button>
+        <button class="tab-btn" data-tab="tab-master">Master's (AE)</button>
+        <button class="tab-btn" data-tab="tab-urop">UROP</button>
+      </div>
+
+      <!-- ── Bachelor's Tab ── -->
+      <div class="tab-panel active" id="tab-bachelor">
+
+        <!-- CARD START — copy this entire block to add a new project -->
+        <div class="card">
+          <!-- EDIT: Project title -->
+          <h3>Capstone Design Project</h3>
+          <!-- EDIT: Year or date range -->
+          <p class="card-meta">2021 – 2022 · Mechanical Engineering, KAIST</p>
+          <!-- EDIT: Short description of the project -->
+          <p>
+            Designed and fabricated a [describe your project here]. Applied principles
+            of [relevant field] to solve [problem statement]. Collaborated with a team
+            of [number] students throughout the design cycle.
+          </p>
+        </div>
+        <!-- CARD END -->
+
+        <!-- CARD START — copy this entire block to add a new project -->
+        <div class="card">
+          <h3>Senior Thesis</h3>
+          <p class="card-meta">2022 · Mechanical Engineering, KAIST</p>
+          <p>
+            Investigated [topic] under the supervision of Professor [Name].
+            The thesis focused on [main contribution or finding].
+          </p>
+        </div>
+        <!-- CARD END -->
+
+      </div>
+
+      <!-- ── Master's Tab ── -->
+      <div class="tab-panel" id="tab-master">
+
+        <!-- CARD START -->
+        <div class="card">
+          <h3>Master's Research — [Your Research Title]</h3>
+          <p class="card-meta">2023 – Present · Aerospace Engineering, KAIST</p>
+          <p>
+            My graduate research focuses on [topic]. The goal is to [describe objective].
+            This work involves [methods or tools used], and aims to contribute to [field].
+          </p>
+        </div>
+        <!-- CARD END -->
+
+        <!-- CARD START -->
+        <div class="card">
+          <h3>Course Project — [Project Name]</h3>
+          <p class="card-meta">2023 · AE [Course Number], KAIST</p>
+          <p>
+            Completed a project on [topic] as part of the course [Course Name].
+            Implemented [method] and achieved [result].
+          </p>
+        </div>
+        <!-- CARD END -->
+
+      </div>
+
+      <!-- ── UROP Tab ── -->
+      <div class="tab-panel" id="tab-urop">
+
+        <!-- CARD START -->
+        <div class="card">
+          <h3>UROP — [Research Topic]</h3>
+          <p class="card-meta">2020 · [Lab Name], KAIST</p>
+          <p>
+            Participated in the Undergraduate Research Opportunities Program under
+            Professor [Name]. Assisted with [describe your contribution].
+            Gained hands-on experience in [skills or equipment].
+          </p>
+        </div>
+        <!-- CARD END -->
+
+        <!-- CARD START -->
+        <div class="card">
+          <h3>UROP — [Another Project]</h3>
+          <p class="card-meta">2021 · [Lab Name], KAIST</p>
+          <p>
+            Worked on [topic] in the [Lab Name] laboratory. Responsibilities
+            included [tasks]. This experience introduced me to [outcome].
+          </p>
+        </div>
+        <!-- CARD END -->
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ════════════════════════════════════════════════════════
+       EXPERIENCE SECTION
+       EDIT: Add your professional/internship experiences.
+
+       TO ADD A NEW ENTRY:
+       Copy the block between <!-- ENTRY START --> and <!-- ENTRY END -->
+       and paste it inside .timeline. Then change the text.
+  ════════════════════════════════════════════════════════ -->
+  <section id="experience" class="section">
+    <div class="container">
+      <h2 class="section-title">Experience</h2>
+      <div class="section-underline"></div>
+
+      <div class="timeline">
+
+        <!-- ENTRY START — copy this block to add a new entry -->
+        <div class="timeline-entry">
+          <!-- EDIT: Your job title or role -->
+          <h3>Research Intern</h3>
+          <!-- EDIT: Organization name -->
+          <p class="org">[Company / Lab / Organization Name]</p>
+          <!-- EDIT: Start and end dates -->
+          <p class="dates">Jun 2022 – Aug 2022</p>
+          <!-- EDIT: What you did in this role -->
+          <p>
+            Assisted with [describe tasks]. Worked on [project or topic].
+            Used [tools or methods]. Contributed to [outcome].
+          </p>
+        </div>
+        <!-- ENTRY END -->
+
+        <!-- ENTRY START -->
+        <div class="timeline-entry">
+          <h3>Teaching Assistant</h3>
+          <p class="org">KAIST — Department of Mechanical Engineering</p>
+          <p class="dates">Sep 2022 – Dec 2022</p>
+          <p>
+            Assisted Professor [Name] in [Course Name]. Held office hours,
+            graded assignments, and supported students with [specific topics].
+          </p>
+        </div>
+        <!-- ENTRY END -->
+
+        <!-- ENTRY START -->
+        <div class="timeline-entry">
+          <h3>[Another Role]</h3>
+          <p class="org">[Organization]</p>
+          <p class="dates">[Start] – [End]</p>
+          <p>
+            [Description of what you did here.]
+          </p>
+        </div>
+        <!-- ENTRY END -->
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ════════════════════════════════════════════════════════
+       CREATIVE SECTION
+       Filter buttons: All / Making / Drawing / Photography
+
+       EDIT: Add images to each category below.
+
+       TO ADD A NEW IMAGE:
+       1. Upload your image to the 'images' folder on GitHub.
+       2. Copy the block between <!-- ITEM START --> and <!-- ITEM END -->
+       3. Change data-category to: making / drawing / photography
+       4. Change src="images/..." to your image filename.
+       5. Change the caption text.
+  ════════════════════════════════════════════════════════ -->
+  <section id="creative" class="section">
+    <div class="container">
+      <h2 class="section-title">Creative</h2>
+      <div class="section-underline"></div>
+
+      <!-- Filter buttons — do not change data-filter values -->
+      <div class="filter-bar">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="making">Making</button>
+        <button class="filter-btn" data-filter="drawing">Drawing</button>
+        <button class="filter-btn" data-filter="photography">Photography</button>
+      </div>
+
+      <div class="creative-grid">
+
+        <!-- ── MAKING items ── -->
+
+        <!-- ITEM START — change data-category="making" for Making items -->
+        <figure class="creative-item" data-category="making">
+          <!-- EDIT: Replace with your image path -->
+          <img src="images/making-01.jpg" alt="Making project 1" />
+          <figcaption class="creative-caption">
+            <span class="creative-category-tag">Making</span><br />
+            <!-- EDIT: Caption / title of this piece -->
+            [Project name or short description]
+          </figcaption>
+        </figure>
+        <!-- ITEM END -->
+
+        <!-- ITEM START -->
+        <figure class="creative-item" data-category="making">
+          <img src="images/making-02.jpg" alt="Making project 2" />
+          <figcaption class="creative-caption">
+            <span class="creative-category-tag">Making</span><br />
+            [Another making project]
+          </figcaption>
+        </figure>
+        <!-- ITEM END -->
+
+        <!-- ── DRAWING items ── -->
+
+        <!-- ITEM START — change data-category="drawing" for Drawing items -->
+        <figure class="creative-item" data-category="drawing">
+          <img src="images/drawing-01.jpg" alt="Drawing 1" />
+          <figcaption class="creative-caption">
+            <span class="creative-category-tag">Drawing</span><br />
+            [Title of drawing or series]
+          </figcaption>
+        </figure>
+        <!-- ITEM END -->
+
+        <!-- ITEM START -->
+        <figure class="creative-item" data-category="drawing">
+          <img src="images/drawing-02.jpg" alt="Drawing 2" />
+          <figcaption class="creative-caption">
+            <span class="creative-category-tag">Drawing</span><br />
+            [Another drawing]
+          </figcaption>
+        </figure>
+        <!-- ITEM END -->
+
+        <!-- ── PHOTOGRAPHY items ── -->
+
+        <!-- ITEM START — change data-category="photography" for Photography items -->
+        <figure class="creative-item" data-category="photography">
+          <img src="images/photo-01.jpg" alt="Photograph 1" />
+          <figcaption class="creative-caption">
+            <span class="creative-category-tag">Photography</span><br />
+            [Location, subject, or series name]
+          </figcaption>
+        </figure>
+        <!-- ITEM END -->
+
+        <!-- ITEM START -->
+        <figure class="creative-item" data-category="photography">
+          <img src="images/photo-02.jpg" alt="Photograph 2" />
+          <figcaption class="creative-caption">
+            <span class="creative-category-tag">Photography</span><br />
+            [Another photograph]
+          </figcaption>
+        </figure>
+        <!-- ITEM END -->
+
+        <!-- ITEM START -->
+        <figure class="creative-item" data-category="photography">
+          <img src="images/photo-03.jpg" alt="Photograph 3" />
+          <figcaption class="creative-caption">
+            <span class="creative-category-tag">Photography</span><br />
+            [Another photograph]
+          </figcaption>
+        </figure>
+        <!-- ITEM END -->
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ════════════════════════════════════════════════════════
+       CONTACT SECTION
+       EDIT: Your email address (appears twice below).
+  ════════════════════════════════════════════════════════ -->
+  <section id="contact" class="section">
+    <div class="container">
+      <h2 class="section-title">Contact</h2>
+      <div class="section-underline"></div>
+
+      <div class="contact-box">
+        <!-- EDIT: Change the description text -->
+        <p>
+          I am always happy to connect — whether about research collaborations,
+          creative projects, or just a conversation. Feel free to reach out.
+        </p>
+
+        <!-- EDIT: Replace both instances of the email address below -->
+        <a href="mailto:jeonhj@kaist.ac.kr" class="contact-email">
+          ✉ jeonhj@kaist.ac.kr
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ════════════════════════════════════════════════════════
+       FOOTER
+       EDIT: Change the name and year if needed.
+  ════════════════════════════════════════════════════════ -->
+  <footer>
+    <!-- EDIT: Your name and current year -->
+    <p>&copy; 2025 Hyun-Jun Jeon &nbsp;·&nbsp; Built with GitHub Pages</p>
+  </footer>
+
+
+  <!-- JavaScript (loads last for performance) -->
+  <script src="js/main.js"></script>
+
+</body>
+</html>
