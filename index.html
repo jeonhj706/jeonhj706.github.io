@@ -3,125 +3,187 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <!-- EDIT: Change this to your name -->
   <title>Hyun-Jun Jeon</title>
 
-  <!-- Google Fonts (no installation needed) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-
-  <!-- Stylesheet -->
   <link rel="stylesheet" href="css/style.css" />
+
+  <!-- Extra styles for the Achievements section -->
+  <style>
+    .achievements-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: start;
+    }
+    .subsection-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 20px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid var(--border);
+    }
+    .skills-group {
+      margin-bottom: 20px;
+    }
+    .skills-group-label {
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+      margin-bottom: 8px;
+    }
+    .skills-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .skill-tag {
+      background: var(--bg);
+      border: 1.5px solid var(--border);
+      border-radius: 4px;
+      padding: 4px 12px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--text);
+    }
+    .honor-card {
+      border-left: 3px solid var(--accent);
+      padding: 10px 14px;
+      margin-bottom: 12px;
+      background: var(--surface);
+      border-radius: 0 4px 4px 0;
+    }
+    .honor-card p {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 2px;
+    }
+    .honor-card span {
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+    @media (max-width: 768px) {
+      .achievements-grid { grid-template-columns: 1fr; }
+    }
+  </style>
 </head>
 <body>
 
+  <!-- ════════════════════════════════════════════════════
+       HEADER / NAVIGATION
+  ════════════════════════════════════════════════════ -->
   <header>
     <nav class="container nav-inner">
-
-      <!-- EDIT: Your name as it appears in the top-left corner -->
       <a href="#hero" class="nav-logo">Hyun-Jun Jeon</a>
 
-      <!-- Hamburger button (visible on mobile only) -->
       <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
-        <span></span>
-        <span></span>
-        <span></span>
+        <span></span><span></span><span></span>
       </button>
 
-      <!-- Navigation links -->
       <ul class="nav-links" id="nav-links">
         <li><a href="#about">About</a></li>
         <li><a href="#academic">Academic</a></li>
         <li><a href="#experience">Experience</a></li>
+        <li><a href="#achievements">Achievements</a></li>
         <li><a href="#creative">Creative</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
-
     </nav>
   </header>
 
+
+  <!-- ════════════════════════════════════════════════════
+       HERO
+  ════════════════════════════════════════════════════ -->
   <section id="hero">
     <div class="container hero-inner">
 
-      <!-- EDIT: Replace 'images/profile.jpg' with the path to your photo.
-           Upload your photo to the 'images' folder in GitHub.
-           The filename must match exactly (including uppercase/lowercase). -->
-      <img
-        src="images/profile.jpg"
-        alt="Profile photo of Hyun-Jun Jeon"
-        class="hero-photo"
-      />
+      <!-- EDIT: Replace with your photo -->
+      <img src="images/profile.jpg" alt="Profile photo of Hyun-Jun Jeon" class="hero-photo" />
 
       <div class="hero-text">
-
-        <!-- EDIT: Your full name -->
         <h1>Hyun-Jun Jeon</h1>
-
-        <!-- EDIT: Your title / current status -->
         <p class="hero-subtitle">M.S. Candidate · Aerospace Engineering · KAIST</p>
 
-        <!-- EDIT: A short 2–3 sentence bio about yourself -->
         <p class="hero-bio">
-          I am a graduate student at KAIST studying aerospace engineering,
-          with a background in mechanical engineering. Alongside my research,
-          I explore creative work in making, traveling, and photography.
+          I study deployable and reconfigurable structures for future space applications
+          at the Space Structures &amp; H/W Systems Lab, KAIST. My background in mechanical
+          engineering informs my approach to structural design, with broader interests in
+          on-orbit assembly and in-space manufacturing.
         </p>
 
-        <!-- EDIT: Update the href values with your actual links.
-             For email: use   href="mailto:your@email.com"
-             For GitHub: use  href="https://github.com/yourusername"
-             For LinkedIn: use href="https://linkedin.com/in/yourprofile"
-             Remove any <a> block you do not want to show. -->
         <div class="hero-links">
-          <a href="mailto:jeonhj@kaist.ac.kr" class="hero-link">✉ Email</a>
-          <a href="https://github.com/jeonhj706" class="hero-link" target="_blank" rel="noopener">GitHub</a>
-          <!-- EDIT: Add or remove links below -->
-          <!-- <a href="https://www.linkedin.com/in/hyun-jun-jeon-57644926a" class="hero-link" target="_blank" rel="noopener">LinkedIn</a> -->
-          <!-- <a href="YOUR_CV_LINK_HERE" class="hero-link" target="_blank" rel="noopener">CV / Résumé</a> -->
-        </div>
+          <!-- Email button showing the address -->
+          <a href="mailto:jeonhj@kaist.ac.kr" class="hero-link">
+            ✉ Email (jeonhj@kaist.ac.kr)
+          </a>
 
+          <!-- LinkedIn button with logo -->
+          <a href="https://www.linkedin.com/in/hyun-jun-jeon-57644926a" class="hero-link" target="_blank" rel="noopener">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" style="flex-shrink:0;">
+              <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+            </svg>
+            LinkedIn
+          </a>
+
+          <!-- EDIT: Uncomment and add your CV link when available -->
+          <!-- <a href="YOUR_CV_LINK" class="hero-link" target="_blank" rel="noopener">CV / Résumé</a> -->
+        </div>
       </div>
     </div>
   </section>
 
+
+  <!-- ════════════════════════════════════════════════════
+       ABOUT
+  ════════════════════════════════════════════════════ -->
   <section id="about" class="section">
     <div class="container">
       <h2 class="section-title">About</h2>
       <div class="section-underline"></div>
 
-      <!-- EDIT: Write a few paragraphs about yourself.
-           You can have multiple <p> tags for multiple paragraphs. -->
       <div class="about-text">
         <p>
-          I am a graduate student at the Korea Advanced Institute of Science and Technology (KAIST),
-          currently pursuing a Master's degree in Aerospace Engineering. My research interests lie
-          at the intersection of structural mechanics, design, and advanced manufacturing.
+          I am Hyun-Jun Jeon (전현준), an M.S. candidate in Aerospace Engineering at the Korea
+          Advanced Institute of Science and Technology (KAIST). As a member of the Space Structures
+          &amp; H/W Systems Lab, my research focuses on deployable structures, origami-inspired design,
+          and reconfigurable systems for future space habitats and large-scale orbital infrastructure.
         </p>
         <br />
         <p>
-          Prior to graduate school, I completed my Bachelor's degree in Mechanical Engineering at KAIST,
-          where I also participated in UROP (Undergraduate Research Opportunities Program) projects
-          that shaped my passion for engineering research.
+          My foundation in Mechanical Engineering from Korea University (2019–2025) shaped my
+          approach to engineering design and structural mechanics. During my undergraduate years,
+          I developed hands-on skills through design competitions and a research internship in soft
+          robotics at Seoul National University's BioRobotics Lab. I have also collaborated with
+          industry partners — Hanwha Systems and LIG Nex1 — on satellite structural analysis and
+          launch load assessment.
         </p>
         <br />
         <p>
-          Beyond academia, I am passionate about creative work — whether it is crafting objects
-          by hand, sketching and illustrating, or capturing moments through photography. I believe
-          that creativity and engineering complement each other deeply.
+          Alongside my research, I pursue creative work in making, drawing, and photography.
+          I believe that curiosity and creativity are as essential to engineering as technical rigor.
         </p>
       </div>
-
     </div>
   </section>
 
+
+  <!-- ════════════════════════════════════════════════════
+       ACADEMIC
+       Tabs: Bachelor's (ME) · Master's (AE) · UROP
+       EDIT: Add a new card by copying a CARD START/END block.
+  ════════════════════════════════════════════════════ -->
   <section id="academic" class="section">
     <div class="container">
       <h2 class="section-title">Academic</h2>
       <div class="section-underline"></div>
 
-      <!-- Tab buttons — do not change the data-tab values -->
       <div class="academic-tabs">
         <button class="tab-btn active" data-tab="tab-bachelor">Bachelor's (ME)</button>
         <button class="tab-btn" data-tab="tab-master">Master's (AE)</button>
@@ -131,28 +193,41 @@
       <!-- ── Bachelor's Tab ── -->
       <div class="tab-panel active" id="tab-bachelor">
 
-        <!-- CARD START — copy this entire block to add a new project -->
+        <!-- CARD START -->
         <div class="card">
-          <!-- EDIT: Project title -->
-          <h3>Capstone Design Project</h3>
-          <!-- EDIT: Year or date range -->
-          <p class="card-meta">2021 – 2022 · Mechanical Engineering, KAIST</p>
-          <!-- EDIT: Short description of the project -->
+          <h3>B.S. in Mechanical Engineering</h3>
+          <p class="card-meta">Mar. 2019 – Feb. 2025 · Korea University</p>
           <p>
-            Designed and fabricated a [describe your project here]. Applied principles
-            of [relevant field] to solve [problem statement]. Collaborated with a team
-            of [number] students throughout the design cycle.
+            Completed a five-year undergraduate program in Mechanical Engineering at Korea University.
+            Built a broad foundation in engineering design, structural mechanics, thermodynamics, and
+            analytical problem-solving. Interest in structural systems and practical design approaches
+            developed during these years guided the transition to graduate study in aerospace engineering.
           </p>
         </div>
         <!-- CARD END -->
 
-        <!-- CARD START — copy this entire block to add a new project -->
+        <!-- CARD START -->
         <div class="card">
-          <h3>Senior Thesis</h3>
-          <p class="card-meta">2022 · Mechanical Engineering, KAIST</p>
+          <h3>Creative Mechanical Design — Best Design Award</h3>
+          <p class="card-meta">Spring 2023 · Korea University, Department of Mechanical Engineering</p>
           <p>
-            Investigated [topic] under the supervision of Professor [Name].
-            The thesis focused on [main contribution or finding].
+            Designed and built a gripper-based locomotion robot tasked with traversing a series of
+            aluminum bars. Led the mechanical design in Fusion 360, fabricated components using a 3D
+            printer, and implemented motor control via Arduino UNO with a linear actuator and MG90
+            servo motors. The project received the Best Design Award from the department.
+          </p>
+        </div>
+        <!-- CARD END -->
+
+        <!-- CARD START -->
+        <div class="card">
+          <h3>Capstone Design — Mech Anemone II</h3>
+          <p class="card-meta">Fall 2023 · Inter-University Capstone Design Fair</p>
+          <p>
+            Represented the Korea University Mechanical Engineering department at an inter-university
+            Capstone Design Fair. Extended the Creative Mechanical Design project into a construction-site
+            gripper robot — "Mech Anemone II" — inspired by sea anemone tentacles, designed to handle
+            structural loads such as beams and pipes.
           </p>
         </div>
         <!-- CARD END -->
@@ -164,22 +239,27 @@
 
         <!-- CARD START -->
         <div class="card">
-          <h3>Master's Research — [Your Research Title]</h3>
-          <p class="card-meta">2023 – Present · Aerospace Engineering, KAIST</p>
+          <h3>M.S. in Aerospace Engineering — Space Structures &amp; H/W Systems Lab</h3>
+          <p class="card-meta">Feb. 2025 – Feb. 2027 (expected) · KAIST</p>
           <p>
-            My graduate research focuses on [topic]. The goal is to [describe objective].
-            This work involves [methods or tools used], and aims to contribute to [field].
+            Graduate research focused on deployable structures, origami-inspired design, and
+            reconfigurable systems for future space habitats and large-scale orbital infrastructure.
+            Current work explores how structural mechanics and practical fabrication methods can
+            be combined in next-generation space system design. Presented research at the 2026 Spring
+            Korean Society for Aeronautical and Space Sciences (KSAS) conference.
           </p>
         </div>
         <!-- CARD END -->
 
         <!-- CARD START -->
         <div class="card">
-          <h3>Course Project — [Project Name]</h3>
-          <p class="card-meta">2023 · AE [Course Number], KAIST</p>
+          <h3>Industry Collaboration — Satellite Structural Analysis</h3>
+          <p class="card-meta">2025 – Present · Hanwha Systems &amp; LIG Nex1</p>
           <p>
-            Completed a project on [topic] as part of the course [Course Name].
-            Implemented [method] and achieved [result].
+            Participated in collaborative projects with Hanwha Systems and LIG Nex1, gaining
+            practical experience in launch load analysis and structural analysis of satellites and
+            aerospace modules. Developed skills in project scheduling and cross-disciplinary
+            communication with industry engineers.
           </p>
         </div>
         <!-- CARD END -->
@@ -191,23 +271,16 @@
 
         <!-- CARD START -->
         <div class="card">
-          <h3>UROP — [Research Topic]</h3>
-          <p class="card-meta">2020 · [Lab Name], KAIST</p>
+          <h3>HASEL Actuator Research — BioRobotics Lab (BRL)</h3>
+          <p class="card-meta">Dec. 2023 – Feb. 2024 · Seoul National University</p>
           <p>
-            Participated in the Undergraduate Research Opportunities Program under
-            Professor [Name]. Assisted with [describe your contribution].
-            Gained hands-on experience in [skills or equipment].
-          </p>
-        </div>
-        <!-- CARD END -->
-
-        <!-- CARD START -->
-        <div class="card">
-          <h3>UROP — [Another Project]</h3>
-          <p class="card-meta">2021 · [Lab Name], KAIST</p>
-          <p>
-            Worked on [topic] in the [Lab Name] laboratory. Responsibilities
-            included [tasks]. This experience introduced me to [outcome].
+            Participated in the Undergraduate Research Opportunities Program (UROP) at the SNU
+            BioRobotics Lab. Research focused on the fabrication and application of HASEL
+            (Hydraulically Amplified Self-Healing Electrostatic) actuators — a soft actuator type
+            that uses high-voltage breakdown to generate Maxwell stress for linear actuation.
+            Successfully fabricated and tested HASEL actuators and explored a bio-inspired inching
+            locomotion application. Used AutoCAD for structural layout design and laser cutting of
+            electrode films.
           </p>
         </div>
         <!-- CARD END -->
@@ -217,6 +290,11 @@
     </div>
   </section>
 
+
+  <!-- ════════════════════════════════════════════════════
+       EXPERIENCE
+       EDIT: Copy an ENTRY START/END block to add a new entry.
+  ════════════════════════════════════════════════════ -->
   <section id="experience" class="section">
     <div class="container">
       <h2 class="section-title">Experience</h2>
@@ -224,41 +302,72 @@
 
       <div class="timeline">
 
-        <!-- ENTRY START — copy this block to add a new entry -->
+        <!-- ENTRY START -->
         <div class="timeline-entry">
-          <!-- EDIT: Your job title or role -->
-          <h3>Research Intern</h3>
-          <!-- EDIT: Organization name -->
-          <p class="org">[Company / Lab / Organization Name]</p>
-          <!-- EDIT: Start and end dates -->
-          <p class="dates">Jun 2022 – Aug 2022</p>
-          <!-- EDIT: What you did in this role -->
+          <h3>Keio–Korea University Global Leadership Program (GLP)</h3>
+          <p class="org">Korea University &amp; Keio University</p>
+          <p class="dates">Aug. 2023</p>
           <p>
-            Assisted with [describe tasks]. Worked on [project or topic].
-            Used [tools or methods]. Contributed to [outcome].
+            Participated in a bilateral leadership program between Korea University and Keio University
+            (Tokyo). Students from both institutions exchanged perspectives on global leadership and
+            presented on the future of sustainability in engineering. The program emphasized
+            cross-cultural dialogue and international collaboration.
           </p>
         </div>
         <!-- ENTRY END -->
 
         <!-- ENTRY START -->
         <div class="timeline-entry">
-          <h3>Teaching Assistant</h3>
-          <p class="org">KAIST — Department of Mechanical Engineering</p>
-          <p class="dates">Sep 2022 – Dec 2022</p>
+          <h3>Korea University × Yonsei University Makerthon — 3rd Place</h3>
+          <p class="org">Korea University &amp; Yonsei University</p>
+          <p class="dates">Summer 2023</p>
           <p>
-            Assisted Professor [Name] in [Course Name]. Held office hours,
-            graded assignments, and supported students with [specific topics].
+            Competed in an inter-university makerthon under the theme "barrier-free." Designed
+            an amphibious wheelchair for beach environments using screw-propelled vehicle technology.
+            Modeled the design in Fusion 360 and built a 1:5 scale prototype using 3D-printed
+            components, wood, pulleys, and belts. The team placed 3rd out of 10 and donated the
+            prize to the Korea University Center for Students with Disabilities.
           </p>
         </div>
         <!-- ENTRY END -->
 
         <!-- ENTRY START -->
         <div class="timeline-entry">
-          <h3>[Another Role]</h3>
-          <p class="org">[Organization]</p>
-          <p class="dates">[Start] – [End]</p>
+          <h3>Korea University Rowing Team</h3>
+          <p class="org">Korea University</p>
+          <p class="dates">2020 – 2023</p>
           <p>
-            [Description of what you did here.]
+            Active crew member on both the eight and four boats. Maintained a weekly on-campus
+            training schedule during semesters and participated in a five-week summer training
+            camp in preparation for the annual inter-university rowing competition.
+          </p>
+        </div>
+        <!-- ENTRY END -->
+
+        <!-- ENTRY START -->
+        <div class="timeline-entry">
+          <h3>Republic of Korea Army — Squad Leader</h3>
+          <p class="org">Republic of Korea Army (ROKA)</p>
+          <p class="dates">Nov. 2020 – May 2022</p>
+          <p>
+            Completed 18 months of mandatory military service. Served as a counseling soldier
+            supporting fellow servicemembers and contributed to initiatives improving the service
+            environment. Appointed squad leader during the final six months of service.
+            Honorably discharged.
+          </p>
+        </div>
+        <!-- ENTRY END -->
+
+        <!-- ENTRY START -->
+        <div class="timeline-entry">
+          <h3>Model ASEAN-Korean Summit (MAKS) — Socio-Cultural Committee</h3>
+          <p class="org">Asia Exchange Association · Busan, Korea</p>
+          <p class="dates">Jan. – Feb. 2020</p>
+          <p>
+            Selected to participate in the Model ASEAN-Korean Summit, held in conjunction with
+            the official ROK-ASEAN Summit. Served on the Socio-Cultural Committee, contributing
+            to a joint declaration on accelerating online education infrastructure in ASEAN
+            countries through ROK network technology support.
           </p>
         </div>
         <!-- ENTRY END -->
@@ -267,12 +376,124 @@
     </div>
   </section>
 
+
+  <!-- ════════════════════════════════════════════════════
+       ACHIEVEMENTS
+       Two subsections: Skills & Certifications | Scholarships & Honors
+       EDIT: Add a skill tag or honor card by copying the examples below.
+  ════════════════════════════════════════════════════ -->
+  <section id="achievements" class="section">
+    <div class="container">
+      <h2 class="section-title">Achievements</h2>
+      <div class="section-underline"></div>
+
+      <div class="achievements-grid">
+
+        <!-- ── Left: Skills & Certifications ── -->
+        <div>
+          <h3 class="subsection-title">Skills &amp; Certifications</h3>
+
+          <!-- EDIT: Add or remove skill tags below -->
+          <div class="skills-group">
+            <p class="skills-group-label">CAD / Design</p>
+            <div class="skills-tags">
+              <span class="skill-tag">SolidWorks</span>
+              <span class="skill-tag">AutoCAD</span>
+              <span class="skill-tag">Fusion 360</span>
+              <span class="skill-tag">Siemens NX</span>
+              <span class="skill-tag">Creo</span>
+            </div>
+          </div>
+
+          <div class="skills-group">
+            <p class="skills-group-label">Programming</p>
+            <div class="skills-tags">
+              <span class="skill-tag">MATLAB</span>
+              <span class="skill-tag">Arduino (C)</span>
+              <span class="skill-tag">C</span>
+            </div>
+          </div>
+
+          <div class="skills-group">
+            <p class="skills-group-label">Office &amp; Data</p>
+            <div class="skills-tags">
+              <span class="skill-tag">Microsoft Office</span>
+              <span class="skill-tag">Microsoft Access</span>
+            </div>
+          </div>
+
+          <!-- EDIT: Add or remove certification entries below -->
+          <div style="margin-top: 24px;">
+            <div class="honor-card">
+              <p>Computer Specialist in Spreadsheet &amp; Database — Level 1</p>
+              <span>Republic of Korea Ministry of Employment and Labor</span>
+            </div>
+
+            <div class="honor-card">
+              <p>IPESK 차세대 공학자 (Next Generation Engineer)</p>
+              <span>IPESK</span>
+            </div>
+
+            <div class="honor-card">
+              <p>TOEFL iBT: 110 / 120</p>
+              <span>Educational Testing Service (ETS)</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── Right: Scholarships & Honors ── -->
+        <div>
+          <h3 class="subsection-title">Scholarships &amp; Honors</h3>
+
+          <!-- EDIT: Add or remove scholarship/honor entries below -->
+          <div class="honor-card">
+            <p>VERITAS Program Scholarship</p>
+            <span>Korea University, Dept. of Mechanical Engineering · 2023</span>
+          </div>
+
+          <div class="honor-card">
+            <p>Korea University Student Office Special Scholarship</p>
+            <span>Korea University Student Office · 2023</span>
+          </div>
+
+          <div class="honor-card">
+            <p>National Grant — Type II</p>
+            <span>Korea Student Aid Foundation (KOSAF) · 2019</span>
+          </div>
+
+          <div class="honor-card">
+            <p>3rd Place — Korea University × Yonsei University Makerthon</p>
+            <span>Korea University &amp; Yonsei University · 2023</span>
+          </div>
+
+          <div class="honor-card">
+            <p>Best Design Award — Creative Mechanical Design Lecture</p>
+            <span>Korea University, Dept. of Mechanical Engineering · 2023</span>
+          </div>
+
+          <div class="honor-card">
+            <p>Representative of the Republic of Korea — 9th ASEAN-Korean Frontier Forum</p>
+            <span>Asia Exchange Association · 2020</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ════════════════════════════════════════════════════
+       CREATIVE
+       Filter: All · Making · Drawing · Photography
+       EDIT: Copy an ITEM START/END block to add a new image.
+       Upload your image to the 'images' folder, then update
+       src="images/..." and the caption text.
+  ════════════════════════════════════════════════════ -->
   <section id="creative" class="section">
     <div class="container">
       <h2 class="section-title">Creative</h2>
       <div class="section-underline"></div>
 
-      <!-- Filter buttons — do not change data-filter values -->
       <div class="filter-bar">
         <button class="filter-btn active" data-filter="all">All</button>
         <button class="filter-btn" data-filter="making">Making</button>
@@ -284,78 +505,78 @@
 
         <!-- ── MAKING items ── -->
 
-        <!-- ITEM START — change data-category="making" for Making items -->
+        <!-- ITEM START -->
         <figure class="creative-item" data-category="making">
-          <!-- EDIT: Replace with your image path -->
-          <img src="images/making-01.jpg" alt="Making project 1" />
+          <!-- EDIT: Replace with your image -->
+          <img src="images/making-01.jpg" alt="Making project" />
           <figcaption class="creative-caption">
             <span class="creative-category-tag">Making</span><br />
-            <!-- EDIT: Caption / title of this piece -->
-            [Project name or short description]
+            <!-- EDIT: Caption -->
+            [Project name or description]
           </figcaption>
         </figure>
         <!-- ITEM END -->
 
         <!-- ITEM START -->
         <figure class="creative-item" data-category="making">
-          <img src="images/making-02.jpg" alt="Making project 2" />
+          <img src="images/making-02.jpg" alt="Making project" />
           <figcaption class="creative-caption">
             <span class="creative-category-tag">Making</span><br />
-            [Another making project]
+            [Project name or description]
           </figcaption>
         </figure>
         <!-- ITEM END -->
 
         <!-- ── DRAWING items ── -->
 
-        <!-- ITEM START — change data-category="drawing" for Drawing items -->
+        <!-- ITEM START -->
         <figure class="creative-item" data-category="drawing">
-          <img src="images/drawing-01.jpg" alt="Drawing 1" />
+          <img src="images/drawing-01.jpg" alt="Drawing" />
           <figcaption class="creative-caption">
             <span class="creative-category-tag">Drawing</span><br />
-            [Title of drawing or series]
+            [Title or series]
           </figcaption>
         </figure>
         <!-- ITEM END -->
 
         <!-- ITEM START -->
         <figure class="creative-item" data-category="drawing">
-          <img src="images/drawing-02.jpg" alt="Drawing 2" />
+          <img src="images/drawing-02.jpg" alt="Drawing" />
           <figcaption class="creative-caption">
             <span class="creative-category-tag">Drawing</span><br />
-            [Another drawing]
+            [Title or series]
           </figcaption>
         </figure>
         <!-- ITEM END -->
 
         <!-- ── PHOTOGRAPHY items ── -->
 
-        <!-- ITEM START — change data-category="photography" for Photography items -->
+        <!-- ITEM START -->
         <figure class="creative-item" data-category="photography">
-          <img src="images/photo-01.jpg" alt="Photograph 1" />
+          <img src="images/photo-01.jpg" alt="Photograph" />
           <figcaption class="creative-caption">
             <span class="creative-category-tag">Photography</span><br />
-            [Location, subject, or series name]
+            [Location or subject]
           </figcaption>
         </figure>
         <!-- ITEM END -->
 
         <!-- ITEM START -->
         <figure class="creative-item" data-category="photography">
-          <img src="images/photo-02.jpg" alt="Photograph 2" />
+          <img src="images/photo-02.jpg" alt="Photograph" />
           <figcaption class="creative-caption">
             <span class="creative-category-tag">Photography</span><br />
-            [Another photograph]
+            [Location or subject]
           </figcaption>
         </figure>
         <!-- ITEM END -->
 
         <!-- ITEM START -->
         <figure class="creative-item" data-category="photography">
-          <img src="images/photo-03.jpg" alt="Photograph 3" />
+          <img src="images/photo-03.jpg" alt="Photograph" />
           <figcaption class="creative-caption">
             <span class="creative-category-tag">Photography</span><br />
-            [Another photograph]
+            [Location or subject]
           </figcaption>
         </figure>
         <!-- ITEM END -->
@@ -364,35 +585,35 @@
     </div>
   </section>
 
+
+  <!-- ════════════════════════════════════════════════════
+       CONTACT
+  ════════════════════════════════════════════════════ -->
   <section id="contact" class="section">
     <div class="container">
       <h2 class="section-title">Contact</h2>
       <div class="section-underline"></div>
 
       <div class="contact-box">
-        <!-- EDIT: Change the description text -->
         <p>
-          I am always happy to connect — whether about research collaborations,
-          creative projects, or just a conversation. Feel free to reach out.
+          I welcome inquiries about research collaborations, academic opportunities,
+          or creative projects. Feel free to reach out by email.
         </p>
-
-        <!-- EDIT: Replace both instances of the email address below -->
         <a href="mailto:jeonhj@kaist.ac.kr" class="contact-email">
           ✉ jeonhj@kaist.ac.kr
         </a>
       </div>
-
     </div>
   </section>
 
+
+  <!-- ════════════════════════════════════════════════════
+       FOOTER
+  ════════════════════════════════════════════════════ -->
   <footer>
-    <!-- EDIT: Your name and current year -->
     <p>&copy; 2025 Hyun-Jun Jeon &nbsp;·&nbsp; Built with GitHub Pages</p>
   </footer>
 
-
-  <!-- JavaScript (loads last for performance) -->
   <script src="js/main.js"></script>
-
 </body>
 </html>
